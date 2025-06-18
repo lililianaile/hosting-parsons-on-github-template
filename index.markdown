@@ -326,12 +326,12 @@ Ordne  den code.
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
 
-<div id="p1-sortableTrash" class="sortable-code"></div>
-<div id="p1-sortable" class="sortable-code"></div>
+<div id="p11-sortableTrash" class="sortable-code"></div>
+<div id="p11-sortable" class="sortable-code"></div>
 <div style="clear:both;"></div>
 <p>
-    <input id="p1-feedbackLink" value="Get Feedback" type="button" />
-    <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
+    <input id="p11-feedbackLink" value="Get Feedback" type="button" />
+    <input id="p11-newInstanceLink" value="Reset Problem" type="button" />
 </p>
 <script type="text/javascript">
 (function() {
@@ -340,7 +340,7 @@ Re-arrange the blocks below so they print out "Hello World!"
     "print(\"World\")\n" +
     "print(\"!\")";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "p1-sortable",
+    "sortableId": "p11-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -355,7 +355,7 @@ Re-arrange the blocks below so they print out "Hello World!"
       event.preventDefault();
       parsonsPuzzle.shuffleLines();
   });
-  $("#p1-feedbackLink").click(function(event){
+  $("#p11-feedbackLink").click(function(event){
       event.preventDefault();
       parsonsPuzzle.getFeedback();
   });
