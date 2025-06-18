@@ -347,7 +347,7 @@ Re-arrange the blocks below so they print out "Hello World!"
     "can_indent": false,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash"
+    "trashId": "p11-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
