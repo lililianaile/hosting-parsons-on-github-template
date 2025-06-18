@@ -323,6 +323,47 @@ Ordne  den code.
 })(); 
 </script>
 
+## Test 3
+<div id="testpuzzle3-sortableTrash" class="sortable-code"></div> 
+<div id="testpuzzle3-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="testpuzzle3-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="testpuzzle3-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "public class text {\n" +
+    "	public static void main(String[] args){\n" +
+    "		System.out.println(&quot;Text eines Programms.&quot;);\n" +
+    "    }\n" +
+    "}\n" +
+    "public static void main (String[&quot;Text eines Programms.]) #distractor";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "testpuzzle3-sortable",
+    "max_wrong_lines": 1,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "testpuzzle3-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#testpuzzle3-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#testpuzzle3-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
 
