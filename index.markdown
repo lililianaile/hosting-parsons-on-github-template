@@ -259,7 +259,7 @@ Ordne den Code so dass ein Text geprintet wird.
     "public static void main (String[&quot;Text eines Programms.]) #distractor";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "testpuzzle-sortable",
-    "max_wrong_lines": 10,
+    "max_wrong_lines": 1,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
