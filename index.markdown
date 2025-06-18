@@ -323,6 +323,45 @@ Ordne  den code.
 })(); 
 </script>
 
+## Parsons 1 (Line Based Grader)
+Re-arrange the blocks below so they print out "Hello World!"
+
+<div id="p1-sortableTrash" class="sortable-code"></div>
+<div id="p1-sortable" class="sortable-code"></div>
+<div style="clear:both;"></div>
+<p>
+    <input id="p1-feedbackLink" value="Get Feedback" type="button" />
+    <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
+</p>
+<script type="text/javascript">
+(function() {
+  var initial = "print(\"Hello\")\n" +
+    "print(\" \")\n" +
+    "print(\"World\")\n" +
+    "print(\"!\")";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "p1-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": false,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "p1-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#p1-newInstanceLink").click(function(event){
+      event.preventDefault();
+      parsonsPuzzle.shuffleLines();
+  });
+  $("#p1-feedbackLink").click(function(event){
+      event.preventDefault();
+      parsonsPuzzle.getFeedback();
+  });
+})();
+</script>
+
 ### Implementation Notes
 
 When you host multiple Parson's problems on a single markdown page, you need to add a unique prefix. You can easily do this in the Codio generator by typing a unique prefix into the "Prefix" textbox and pressing Enter/Return. Then you can simply copy-paste like normal.
