@@ -282,7 +282,7 @@ Ordne den Code so dass ein Text geprintet wird.
 </script>
 
 ## Test2
-Ordne code.
+Ordne  den code.
 
 <div id="testpuzzle2-sortableTrash" class="sortable-code"></div> 
 <div id="testpuzzle2-sortable" class="sortable-code"></div> 
