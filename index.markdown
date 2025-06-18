@@ -351,7 +351,7 @@ Re-arrange the blocks below so they print out "Hello World!"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#p1-newInstanceLink").click(function(event){
+  $("#p11-newInstanceLink").click(function(event){
       event.preventDefault();
       parsonsPuzzle.shuffleLines();
   });
