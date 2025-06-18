@@ -238,6 +238,8 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
 </script>
 
 ### Testpuzzle
+Ordne den Code so dass ein Text geprintet wird.
+
 <div id="testpuzzle-sortableTrash" class="sortable-code"></div> 
 <div id="testpuzzle-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
